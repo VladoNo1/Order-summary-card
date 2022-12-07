@@ -1,0 +1,205 @@
+:root {
+  --clr-primary-100: hsl(225, 100%, 94%);
+  --clr-primary-400: hsl(245, 75%, 52%);
+  --clr-secondary: hsl(30, 38%, 92%);
+
+  --clr-neutral-100: hsl(225, 100%, 98%);
+  --clr-neutral-300: hsl(224, 23%, 55%);
+  --clr-neutral-900: hsl(223, 47%, 23%);
+
+  --fontfamily-main: "Red Hat Display", sans-serif;
+
+  --fontweight-regular: 500;
+  --fontweight-bold: 700;
+  --fontweight-xbold: 900;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  font-family: var(--fontfam-main);
+  font-weight: var(--fontweight-regular);
+  font-size: 1rem;
+  background-image: url(/images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-color: var(--clr-primary-100);
+  display: grid;
+  place-content: center;
+  margin: 0.5rem;
+  height: 100vh;
+}
+
+.product {
+  overflow: hidden;
+  border-radius: 1rem;
+  display: grid;
+  max-width: 350px;
+  margin: 1rem;
+}
+.product_img {
+  width: 100%;
+}
+.heading {
+  font-family: var(--fontfamily-main);
+  color: var(--clr-neutral-900);
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: var(--fontweight-xbold);
+  padding: 1rem 1rem 0 1rem;
+}
+.description {
+  font-size: 1rem;
+  line-height: 1.5em;
+  color: var(--clr-neutral-300);
+  text-align: center;
+  font-weight: var(--fontweight-regular);
+}
+.content {
+  background-color: var(--clr-neutral-100);
+}
+.pricing {
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  margin: 0.5rem;
+
+  border-radius: 1rem;
+  background-color: #eff1fc;
+}
+.description {
+  font-family: var(--fontfamily-main);
+  font-size: 1rem;
+  font-weight: var(--fontweight-bold);
+  padding: 1.5rem;
+}
+.plan {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.plan_lenght {
+  font-family: var(--fontfamily-main);
+  font-weight: var(--fontweight-xbold);
+  color: var(--clr-neutral-900);
+  font-size: 1rem;
+}
+.plan_price {
+  font-family: var(--fontfamily-main);
+  color: var(--clr-neutral-300);
+  font-weight: var(--fontweight-xbold);
+}
+.cancel {
+  font-weight: var(--fontweight-bold);
+  font-family: var(--fontfamily-main);
+  color: var(--clr-neutral-300);
+  font-size: 1rem;
+}
+.canceling {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  letter-spacing: -1px;
+}
+
+.canceling > a {
+  text-decoration: none;
+}
+.plan_select {
+  padding-left: 2rem;
+  color: var(--clr-primary-400);
+  font-weight: var(--fontweight-bold);
+  font-family: var(--fontfamily-main);
+  padding: 1.5rem;
+}
+.button_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-family: var(--fontfamily-main);
+  font-weight: var(--fontweight-bold);
+  color: var(--clr-neutral-100);
+  background-color: var(--clr-primary-400);
+  padding: 1rem 3rem;
+  margin: 0 0.5rem;
+}
+.cancel:is(:hover, :focus) {
+  color: var(--clr-neutral-900);
+}
+
+.button:is(:hover, :focus) {
+  background-color: var(--clr-neutral-900);
+  box-shadow: 0 0 20px 10px #d5d2e2;
+}
+
+.plan_select:is(:hover, :focus) {
+  color: var(--clr-neutral-900);
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url(/images/pattern-background-desktop.svg);
+  }
+}
+
+@media (min-width: 768px) {
+  .product {
+    max-width: 400px;
+  }
+}
+
+.attribution {
+  text-align: center;
+}
