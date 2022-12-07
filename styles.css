@@ -174,14 +174,15 @@ body {
   background-color: var(--clr-primary-400);
   padding: 1rem 3rem;
   margin: 0 0.5rem;
+  box-shadow: 0px 10px 20px rgba(77, 77, 77, 0.3);
 }
 .cancel:is(:hover, :focus) {
   color: var(--clr-neutral-900);
+  text-decoration: none;
 }
 
 .button:is(:hover, :focus) {
-  background-color: var(--clr-neutral-900);
-  box-shadow: 0 0 20px 10px #d5d2e2;
+  opacity: 0.7;
 }
 
 .plan_select:is(:hover, :focus) {
@@ -191,6 +192,8 @@ body {
 @media (min-width: 768px) {
   body {
     background-image: url(pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 
