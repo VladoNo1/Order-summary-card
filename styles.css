@@ -62,7 +62,7 @@ body {
   font-family: var(--fontfam-main);
   font-weight: var(--fontweight-regular);
   font-size: 1rem;
-  background-image: url(/images/pattern-background-mobile.svg);
+  background-image: url(pattern-background-mobile.svg);
   background-repeat: no-repeat;
   background-color: var(--clr-primary-100);
   display: grid;
@@ -190,7 +190,7 @@ body {
 
 @media (min-width: 768px) {
   body {
-    background-image: url(/images/pattern-background-desktop.svg);
+    background-image: url(pattern-background-desktop.svg);
   }
 }
 
